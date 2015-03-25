@@ -1,0 +1,17 @@
+{
+  "name": "daniel-g.com",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Daniel Gaytan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "jade": "latest",
+    "bower": "latest"
+  }
+}
