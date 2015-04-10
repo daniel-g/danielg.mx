@@ -8,6 +8,10 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.get('/templates/:id*', function(req, res){
+  res.render('./templates/' + req.params.id + req.params[0]);
+});
+
 app.use(sassMiddleware({
   src: path.join(__dirname, 'assets'),
   dest: path.join(__dirname, 'public'),
