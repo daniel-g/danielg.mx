@@ -19,7 +19,7 @@ app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'jade')
 
-var server = app.listen(process.env.PORT || 3000, function () {
+var server = app.listen(process.env.PORT || 8000, function () {
   var host = server.address().address;
   var port = server.address().port;
 });
