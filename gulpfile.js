@@ -28,8 +28,6 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./public/js'));
 });
 
-
-
 gulp.task('assets:watch', function () {
   gulp.watch('./assets/css/**/*.sass', ['sass']);
   gulp.watch('./assets/js/**/*.js', ['js']);

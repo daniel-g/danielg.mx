@@ -3,6 +3,7 @@ var app = express();
 
 // Static middleware
 app.use('/vendor/', express.static(__dirname + '/vendor/'));
+app.use('/img/', express.static(__dirname + '/assets/img/'));
 app.use(express.static('public'));
 
 // Configuration
@@ -11,7 +12,7 @@ app.set('view engine', 'jade')
 
 // Routes
 app.get('/', function (req, res) {
-  res.render('welcome/index');
+  res.render('welcome/index', { title: 'Somethings' });
 });
 
 // Server
