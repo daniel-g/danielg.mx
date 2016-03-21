@@ -1,7 +1,8 @@
 {
-  "name": "daniel-g.com",
+  "name": "danielg.mx",
   "version": "1.0.0",
-  "description": "Personal site",
+  "description": "Personal page",
+  "url": "http://danielg.mx/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +10,20 @@
     "postinstall": "bower install"
   },
   "author": "Daniel Gaytan",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
-    "express": "^4.12.3",
+    "express": "5.0.0-alpha.2",
     "jade": "latest",
-    "bower": "latest",
-    "node-sass-middleware": "latest"
+    "bower": "latest"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7"
   }
 }

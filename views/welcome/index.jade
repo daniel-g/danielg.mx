@@ -4,17 +4,16 @@ html(lang="en")
     title Daniel Gaytán
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     script(type='text/javascript' src='/vendor/jquery/dist/jquery.js')
-    script(type='text/javascript' src='/vendor/semantic-ui/dist/semantic.js')
     script(type='text/javascript' src='/vendor/angularjs/angular.js')
-    link(rel='stylesheet' href='/vendor/semantic-ui/dist/semantic.css')
-    link(rel='stylesheet' href='/css/index.css')
+    script(type='text/javascript' src='/vendor/tether/dist/js/tether.js')
+    script(type='text/javascript' src='/vendor/bootstrap/dist/js/bootstrap.js')
+    link(rel='stylesheet' href='/css/application.css')
   body(ng-app)
     .ui.page.grid
       .row
       .row
-        .column
-          h1 Daniel Gaytán
-          div(ng-include="'/templates/lists/contact'")
+        .col-12
+          include ./header.jade
       .row
         .ui.one.column.stackable.grid
           h2 About
@@ -22,15 +21,9 @@ html(lang="en")
             | 6+ years experienced Ruby on Rails developer, mid level front end developer on AngularJS, Sussy, Foundation 4, SemanticUI. Passionate about education and awesomeness :)
       .row
         .ui.three.column.stackable.doubling.grid
-          .column
-            h2 I'm proud of
-            div(ng-include="'/templates/lists/projects'")
-          .column
-            h2 Look at the samples
-            div(ng-include="'/templates/lists/code-samples'")
-          .column
-            h2 Personal projects
-            div(ng-include="'/templates/lists/personal-projects'")
+          include ./projects.jade
+          include ./codeSamples.jade
+          include ./personalProjects.jade
     script(type='text/javascript').
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

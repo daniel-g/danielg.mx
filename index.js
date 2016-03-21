@@ -1,28 +1,20 @@
 var express = require('express');
-var sassMiddleware = require('node-sass-middleware');
-var path = require('path');
-
 var app = express();
 
-app.get('/', function (req, res) {
-  res.render('index');
-});
-
-app.get('/templates/:id*', function(req, res){
-  res.render('./templates/' + req.params.id + req.params[0]);
-});
-
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'assets'),
-  dest: path.join(__dirname, 'public'),
-  debug: true,
-  outputStyle: 'expanded'
-}));
-
+// Static middleware
+app.use('/vendor/', express.static(__dirname + '/vendor/'));
 app.use(express.static('public'));
+
+// Configuration
 app.set('views', './views');
 app.set('view engine', 'jade')
 
+// Routes
+app.get('/', function (req, res) {
+  res.render('welcome/index');
+});
+
+// Server
 var server = app.listen(process.env.PORT || 8000, function () {
   var host = server.address().address;
   var port = server.address().port;
