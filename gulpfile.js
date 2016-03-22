@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var babel = require("gulp-babel");
 var concat = require("gulp-concat");
 var gutil = require('gulp-util');
+var runSeq = require('run-sequence');
 
 gulp.task('sass', function () {
   return gulp.src('./assets/css/**/*.sass')
@@ -31,4 +32,8 @@ gulp.task('js', function () {
 gulp.task('assets:watch', function () {
   gulp.watch('./assets/css/**/*.sass', ['sass']);
   gulp.watch('./assets/js/**/*.js', ['js']);
+});
+
+gulp.task('deploy', function () {
+  runSeq('js', 'sass');
 });
