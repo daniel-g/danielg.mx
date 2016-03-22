@@ -1,11 +1,12 @@
 @import "vendor/bootstrap/scss/bootstrap-flex"
+@import "vendor/include-media/dist/include-media"
+$breakpoints: $grid-breakpoints
 
 $ionicons-font-path: "/vendor/Ionicons/fonts"
 @import "vendor/Ionicons/scss/ionicons"
 
 .pointing-header
   cursor: pointer
-  display: inline-block
   padding-right: .3em
   &:hover
     i
@@ -21,12 +22,20 @@ $ionicons-font-path: "/vendor/Ionicons/fonts"
 
 #header
   h1
-    padding-left: 1.3em
-    background: url('/img/palm.svg') no-repeat top left
-    background-size: contain
-    &:hover
-      background: url('/img/palm-red.svg') no-repeat top left
-      background-size: contain
+    flex-wrap: nowrap
+    padding-left: 0.9375rem
+    padding-right: 0.9375rem
+    img
+      flex-basis: auto
+      width: 2em
+      height: 2em
+      @include media(">sm")
+        width: 1em
+        height: 1em
+    span
+      cursor: pointer
+      flex-basis: auto
+      padding-left: 0.3em
 #contact ul
   font-size: 1.3em
 
