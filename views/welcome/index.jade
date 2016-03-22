@@ -11,14 +11,14 @@ html(lang="en")
     script(type='text/javascript' src='/js/application.js')
   body(ng-app='Application')
     .container#main-container
-      .row#header(ng-controller='HeaderController')
+      .row#header
         .col-md-6
-          h1(ng-class='palmClass' ng-mousemove='randomPalm()') Daniel Gaytán
+          h1.pointing-header Daniel Gaytán
           p 7+ years full stack Ruby on Rails developer.
       .row
         .col-md-6#projects
           include ./projects.jade
-        .col-md-6
+        .col-md-6#contact
           include ./contact.jade
     #footer.container-fluid
       .row.licenses.text-xs-right

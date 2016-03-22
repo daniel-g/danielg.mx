@@ -21,6 +21,7 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.2",
     "angularjs": "1.5.0",
-    "tether": "~1.2.0"
+    "tether": "~1.2.0",
+    "Ionicons": "ionicons#~2.0.1"
   }
 }

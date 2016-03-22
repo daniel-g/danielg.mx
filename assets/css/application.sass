@@ -1,19 +1,35 @@
 @import "vendor/bootstrap/scss/bootstrap-flex"
+
+$ionicons-font-path: "/vendor/Ionicons/fonts"
+@import "vendor/Ionicons/scss/ionicons"
+
+.pointing-header
+  cursor: pointer
+  display: inline-block
+  padding-right: .3em
+  &:hover
+    i
+      color: red
+
+.icon
+  margin-right: 0.3em
+  &::before
+    width: 1em
+
 #main-container
   padding-top: 2em
+
 #header
   h1
-    cursor: pointer
+    padding-left: 1.3em
     background: url('/img/palm.svg') no-repeat top left
     background-size: contain
-    display: inline-block
-    padding: 0 .3em 0 1.3em
-    $colors: (blue, green, yellow, red)
-    @each $color in $colors
-      &.#{$color}
-        &:hover
-          background: url('/img/palm-#{$color}.svg') no-repeat top left
-          background-size: contain
+    &:hover
+      background: url('/img/palm-red.svg') no-repeat top left
+      background-size: contain
+#contact ul
+  font-size: 1.3em
+
 #footer
   .licenses
     font-size: 0.6em
